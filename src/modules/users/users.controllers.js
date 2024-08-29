@@ -12,7 +12,7 @@ export const signUp = async(req,res)=>{
     // const doesEmailExist = await User.findOne({where:{email:email}});
     let doesEmailExist;
     try {
-        doesEmailExist= await axios.get(`https://app-22561d9f-42ee-46a9-9a7a-8e35f7b0373a.cleverapps.io/=${email}`);
+        doesEmailExist= await axios.get(`https://app-22561d9f-42ee-46a9-9a7a-8e35f7b0373a.cleverapps.io/users/getUser?email=${email}`);
         console.log(doesEmailExist);
     } catch (error) {
         console.log(error);
